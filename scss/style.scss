@@ -1,0 +1,385 @@
+@import "base";
+@import "colors";
+
+p {
+  font-size: 14px;
+  margin-top: 20px;
+}
+
+header {
+  nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 25px;
+
+    .logo {
+      width: 80px;
+    }
+
+    ul {
+      list-style-type: none;
+      display: flex;
+      padding: 0;
+
+      li {
+        font-size: 12px;
+        padding-left: 25px;
+      }
+    }
+  }
+}
+
+.intro {
+  display: flex;
+  flex-direction: column;
+  padding: 0 35px;
+  margin-top: 70px;
+  text-align: center;
+
+  .first {
+    h1 {
+      margin-top: 40px;
+      font-size: 24px;
+      line-height: 1.5;
+    }
+
+    form {
+      margin-top: 30px;
+      position: relative;
+
+      input {
+        width: 100%;
+        height: 38px;
+        border-radius: 3px;
+        border: 1px solid #000;
+        padding-left: 20px;
+
+        &::placeholder {
+          opacity: 0.4;
+        }
+
+        &:focus {
+          border: 1px solid #d37fb7;
+          outline: none;
+        }
+      }
+
+      .btn {
+        width: 100%;
+        margin-top: 15px;
+      }
+    }
+  }
+
+  .second {
+    order: -1;
+
+    img {
+      width: 100%;
+    }
+  }
+}
+
+// Bg curve
+.bg-curve {
+  margin: 100px 0 -5px 0;
+  padding: 0;
+  height: 55px;
+  background: url("../images/bg-curve-mobile.svg") no-repeat center bottom /
+    cover;
+}
+
+// Productive
+.productive {
+  display: flex;
+  flex-direction: column;
+  background-color: #f8f8fe;
+  padding: 0 25px 80px 25px;
+
+  .second {
+    order: -1;
+  }
+
+  img {
+    max-width: 100%;
+    padding: 30px 5px 0 5px;
+  }
+
+  .first {
+    margin-top: 85px;
+    text-align: center;
+
+    h2 {
+      font-size: 16px;
+    }
+
+    p {
+      text-align: left;
+    }
+
+    a {
+      color: $mod-cyan;
+      font-size: 13px;
+      border-bottom: 1px solid $mod-cyan;
+      padding-bottom: 5px;
+      margin: 40px auto 40px auto;
+      display: inline-block;
+
+      i {
+        font-size: 11px;
+      }
+
+      &:hover {
+        color: saturate($color: $mod-cyan, $amount: 60);
+        border-bottom: 1px solid saturate($color: $mod-cyan, $amount: 60);
+      }
+    }
+
+    .card {
+      width: 280px;
+      margin: auto;
+      background-color: #fff;
+      box-shadow: 0 0 10px darken($color: $light-gray-blue, $amount: 5);
+      border-radius: 5px;
+      padding: 20px;
+      text-align: left;
+
+      .quote {
+        padding: 0;
+      }
+
+      p {
+        margin-top: 5px;
+        font-size: 11px;
+      }
+
+      .person {
+        display: flex;
+        align-items: center;
+        margin-top: 15px;
+
+        img {
+          width: 25px;
+          height: 25px;
+          padding: 0;
+          border-radius: 50%;
+        }
+
+        .data {
+          display: flex;
+          flex-direction: column;
+          padding-left: 10px;
+
+          .name {
+            font-family: "Raleway", sans-serif;
+            font-size: 10px;
+            font-weight: 700;
+            letter-spacing: 1px;
+          }
+
+          .role {
+            font-size: 8px;
+          }
+        }
+      }
+    }
+  }
+}
+
+// Early Access
+.early-access {
+  background-color: $desat-blue;
+  color: #fff;
+  text-align: center;
+  padding: 50px 50px 60px 50px;
+
+  input {
+    width: 250px;
+    height: 32px;
+    border-radius: 2px;
+    border: none;
+    margin-top: 30px;
+    box-shadow: 2px 2px 5px hsl(228, 35%, 34%);
+    padding-left: 15px;
+    position: relative;
+
+    &::placeholder {
+      opacity: 0.4;
+      font-size: 11px;
+    }
+
+    &:focus {
+      border: 1px solid #d37fb7;
+      outline: none;
+    }
+  }
+
+  .btn {
+    width: 250px;
+    margin: 10px auto;
+    font-size: 10px;
+    box-shadow: 2px 2px 5px hsl(228, 35%, 34%);
+  }
+}
+
+// Footer
+footer {
+  background-color: $very-dark-blue;
+  color: #fff;
+  padding: 50px 35px 40px 35px;
+
+  a {
+    color: #fff;
+
+    &:visited {
+      color: #fff;
+    }
+
+    &:hover {
+      color: $bright-blue;
+    }
+  }
+
+  .footer-main {
+    margin-top: 30px;
+  }
+
+  .email,
+  .phone {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+
+    span {
+      padding-left: 15px;
+    }
+  }
+
+  ul {
+    list-style-type: none;
+    margin-top: 50px;
+    padding: 0;
+
+    li {
+      margin-bottom: 15px;
+      font-size: 16px;
+    }
+  }
+
+  .social {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+
+    a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 25px;
+      height: 25px;
+      margin: 5px;
+      border: 1px solid #fff;
+      border-radius: 50%;
+
+      &:hover {
+        color: $bright-blue;
+        border: 1px solid $bright-blue;
+      }
+
+      .fa-facebook-f {
+        font-size: 11px;
+      }
+      .fa-twitter {
+        font-size: 10px;
+      }
+      .fa-instagram {
+        font-size: 12px;
+      }
+    }
+  }
+
+  .logo {
+    img {
+      filter: invert(100%) sepia(0%) saturate(7500%) hue-rotate(270deg)
+        brightness(250%) contrast(105%);
+    }
+  }
+}
+
+// Attribution Footer
+.attribution {
+  font-size: 11px;
+  font-weight: 700;
+  text-align: center;
+  margin: 0;
+  padding: 15px;
+  background-color: #1d1a58;
+  color: hsl(228, 35%, 54%);
+
+  a {
+    color: hsl(228, 65%, 44%);
+  }
+}
+
+// Small phones
+@media screen and (max-width: 350px) {
+  header nav ul li {
+    padding-left: 10px;
+  }
+
+  .productive .first .card {
+    width: 220px;
+  }
+
+  .early-access {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .early-access input,
+  .early-access .btn {
+    width: 200px;
+  }
+
+  footer span {
+    font-size: 14px;
+  }
+}
+
+// Phones landscape
+@media screen and (min-width: 570px) and (max-width: 800px) and (orientation: landscape) {
+  footer {
+    .contact,
+    .links {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .links {
+      padding-left: 40px;
+      margin-top: 40px;
+    }
+
+    .footer-main {
+      display: flex;
+      justify-content: center;
+    }
+  }
+}
+
+// Tablets
+@media screen and (min-width: 600px) {
+  @import "tablets";
+}
+
+// Desktop
+@media screen and (min-width: 1200px) {
+  @import "desktop";
+}

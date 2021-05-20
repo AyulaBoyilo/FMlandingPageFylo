@@ -1,0 +1,63 @@
+@import "colors";
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  // padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+button,
+a,
+nav {
+  font-family: "Raleway", sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+
+  &:visited {
+    color: #000;
+  }
+}
+
+.btn {
+  background-color: $bright-blue;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 11px 50px;
+  outline: none;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+
+  &:hover {
+    background-color: lighten($color: $bright-blue, $amount: 10);
+  }
+}
+
+.alert {
+  position: absolute;
+  left: 0;
+  bottom: -25px;
+  font-size: 14px;
+  color: #d37fb7;
+}
+
+.alert-access {
+  color: #fff;
+  margin-top: -25px;
+  padding-bottom: 20px;
+  font-size: 14px;
+}
